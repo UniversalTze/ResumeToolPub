@@ -38,7 +38,8 @@ ResumeTool/
 ├── completed/                   Original postings are archived here after processing.
 ├── output/                      Final deliverables: tailored resume + cover letter PDFs.
 ├── context/
-│   ├── projects/                Your software projects, strongest first.
+│   ├── user.md                  General information of the user that you would see on a resume. e.g User name, user preferred work location, email and phone number. 
+│   ├── projects/                Your relevant projects, strongest first.
 │   ├── education/               Courses studied.
 │   └── workexp/                 Work experience: the full pool of bullets per role.
 ├── templates/
