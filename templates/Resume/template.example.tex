@@ -1,0 +1,126 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+
+\pagestyle{empty}
+
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=1.5em}
+
+% Simple heading macro
+\newcommand{\resheading}[1]{%
+  \vspace{0.8ex}%
+  \noindent\textbf{\large #1}\\[-2.0ex]
+  \rule{\textwidth}{0.4pt}\vspace{0ex}
+}
+
+\begin{document}
+%==================== HEADER ====================%
+\begin{center}
+    {\LARGE \textbf{Jordan Avery Mercer}}\\[2pt]
+    Brisbane \,|\, 0400 000 000 \,|\, \href{mailto:jordan.mercer@example.com}{jordan.mercer@example.com}\,|\, \href{https://www.linkedin.com/in/example-profile/}{LinkedIn} \,|\, \href{https://github.com/example-user}{GitHub}
+\end{center}
+\vspace{-3ex} 
+%==================== SKILLS ====================%
+\resheading{Skills}
+\noindent\textbf{Languages:}
+Python, Java, TypeScript, JavaScript, SQL, C, R\\[2pt]
+\textbf{Technologies:}
+FastAPI, React, React Native, Expo, Knockout, AWS, Terraform, Docker, Celery, RabbitMQ, PostgreSQL, Oracle, SQLite\\[2pt]
+\textbf{Tools:}
+Git, SVN, Linux, Jira, IntelliJ, Vim
+
+%==================== WORK EXPERIENCE ====================%
+\resheading{Work Experience}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Riverbend State University} & Feb 2026 -- Present \\
+\multicolumn{2}{@{}l}{\textit{Teaching Assistant} \,--\, CS2400 \,--\, Foundations of Data Management} \\
+\end{tabular*}
+\vspace{-1.5ex}
+\begin{itemize}
+    \item Deliver hands-on lab sessions covering entity modelling, indexing, and query writing, walking students through worked examples and common failure modes so they can debug their own schemas.
+    \item Assess weekly exercises and contribute feedback on the marking rubric to keep grading consistent across a cohort of roughly 120 students.
+\end{itemize}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Meridian Systems Group (MSG)} & Nov 2023 -- Nov 2024; Feb 2025 -- Dec 2025\\
+\multicolumn{2}{@{}l}{\textbf{\textit{Data Platform Intern}} \,--\, \textit{PL/SQL, Oracle} \,--\ (clearance held) }  \\
+\end{tabular*}
+\vspace{-1.5ex}
+\begin{itemize}
+    \item Profiled and tuned slow PL/SQL procedures during a multi-quarter Oracle-to-IBM migration, reducing execution time by 20–50\% and refactoring logic so reports kept running as the backend was swapped out.
+    \item Traced dependencies across dozens of base tables to reconstruct the reporting queries stakeholders relied on, validating outputs against known figures to catch discrepancies before they reached end users.
+\end{itemize}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Meridian Systems Group (MSG)} & Nov 2024 -- Feb 2025 \\
+\multicolumn{2}{@{}l}{\textbf{\textit{Frontend Engineer Intern}} \,--\, \textit{Javascript, Typescript, HTML+CSS, Knockout}  \,--\ (clearance held)} \\
+\end{tabular*}
+\vspace{-1.5ex}
+\begin{itemize}
+    \item Diagnosed and fixed a subscription-binding defect where the UI rendered every network peer under both transport types, isolating the state-management bug and restoring an accurate per-peer connection view.
+    \item Overhauled how the dashboard resolved device labels, replacing an inconsistent naming path with the canonical convention so operators saw the correct hardware names throughout.
+    \item Built out a Jasmine test suite for the label-resolution code, pinning behaviour across edge-case configurations and preventing the class of regressions that had caused the original bug.
+\end{itemize}
+
+\vspace{-0.4ex}
+%==================== PROJECTS ====================%
+\resheading{Projects}
+\noindent
+\textbf{OpenArbiter} (\href{https://github.com/example-user/OpenArbiter}{github.com/example-user/OpenArbiter})\\
+Python (FastAPI), Terraform, Celery, Task, Docker, PostgreSQL, AWS
+\begin{itemize}
+    \item Owned the Problem service and contributed to the Submission service in a six-person team shipping an MVP coding platform with full test visibility, built as microservices communicating over a message queue.
+    \item Designed RESTful APIs for problem management and submission handling, dispatching submissions to an asynchronous worker queue for downstream processing by a separate execution service.
+    \item Stood up the AWS infrastructure with Terraform for automated deployment of containerised services, and wrote architecture diagrams and technical docs describing service interactions and deployment topology.
+\end{itemize}
+
+\vspace{0.2ex}
+\noindent
+\textbf{SurgeTrack} (\href{https://github.com/example-user/SurgeTrack}{github.com/example-user/SurgeTrack}) \\
+Python (FastAPI), Terraform, Celery, Task, Docker, REST, SQLite/PostgreSQL, AWS
+\begin{itemize}
+    \item Built a FastAPI backend with Celery-backed async workers to offload long-running analysis jobs, keeping API responses quick under concurrent load.
+    \item Exposed query and aggregation endpoints (summaries, per-record results, status and outcome counts) with operational filtering by urgency and outcome.
+    \item Load-tested with k6 under simulated surge models, ramping to 80 concurrent virtual users across mixed POST/GET/PUT and polling traffic; deployed to AWS with Terraform.
+\end{itemize}
+
+\vspace{0.2ex}
+\noindent
+\textbf{HireLoop} (\href{https://github.com/example-user/HireLoop}{github.com/example-user/HireLoop/HireLoop}) \\
+React, Vite, Javascript, Bootstrap, Bash, Docker, PostgreSQL, PostgREST
+\begin{itemize}
+    \item Built a React frontend (Router loaders/actions, state management) supporting applicant workflows and voice-recorded interview answers against a PostgREST-backed RESTful API.
+    \item Containerised the frontend and the PostgreSQL + PostgREST backend with Docker, plus bash scripts to automate setup and teardown so the whole stack clones and runs locally end-to-end.
+\end{itemize}
+
+\vspace{-0.2ex}
+%==================== EDUCATION ====================%
+\resheading{Education}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Riverbend State University} & Jun 2021 -- Dec 2025 \\
+\end{tabular*}
+
+\noindent
+Bachelor of Computer Science and Commerce (Finance): \textit{GPA: 6.2 / 7}
+\begin{itemize}
+    \item \textbf{Relevant Coursework:} Data Structures and Algorithms, Software Architecture, Computer System Principles and Programming, Web/Mobile Programming, Relational Database Systems.
+\end{itemize}
+
+\vspace{-0.2ex}
+
+%==================== EXTRACURRICULARS ====================%
+\resheading{Additional Experience}
+\noindent
+\textbf{Greenline Grocers} \,--\, Fresh Produce Team Member  \hfill Feb 2025 -- Present \\
+\textbf{University Football Society} \,--\, Competitions Officer \hfill Feb 2025 -- Dec 2025 \\
+\textbf{University Music Club} \,--\, Treasurer \hfill Feb 2024 -- Feb 2025 \\
+\textbf{Cornerstone Supermarkets} \,--\, Fresh Produce Team Member \hfill Aug 2019 -- Oct 2025
+\end{document}
